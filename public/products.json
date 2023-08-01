@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Blue Striped Scarf",
+    "price": 19.99,
+    "imagePath": "https://example.com/images/blue_striped_scarf.jpg",
+    "sku": 1234567890,
+    "color": "Blue"
+  },
+  {
+    "name": "Red Leather Handbag",
+    "price": 59.95,
+    "imagePath": "https://example.com/images/red_leather_handbag.jpg",
+    "sku": 9876543210,
+    "color": "Red"
+  },
+  {
+    "name": "Gold Dangle Earrings",
+    "price": 29.99,
+    "imagePath": "https://example.com/images/gold_dangle_earrings.jpg",
+    "sku": 2468135790,
+    "color": "Gold"
+  },
+  {
+    "name": "Black Fedora Hat",
+    "price": 24.95,
+    "imagePath": "https://example.com/images/black_fedora_hat.jpg",
+    "sku": 1357924680,
+    "color": "Black"
+  },
+  {
+    "name": "Purple Tote Bag",
+    "price": 34.99,
+    "imagePath": "https://example.com/images/purple_tote_bag.jpg",
+    "sku": 5792468130,
+    "color": "Purple"
+  },
+  {
+    "name": "Silver Bangle Bracelet",
+    "price": 15.95,
+    "imagePath": "https://example.com/images/silver_bangle_bracelet.jpg",
+    "sku": 4680135792,
+    "color": "Silver"
+  },
+  {
+    "name": "Green Patterned Scarf",
+    "price": 22.99,
+    "imagePath": "https://example.com/images/green_patterned_scarf.jpg",
+    "sku": 5790132468,
+    "color": "Green"
+  },
+  {
+    "name": "Yellow Beanie Hat",
+    "price": 18.50,
+    "imagePath": "https://example.com/images/yellow_beanie_hat.jpg",
+    "sku": 1350246798,
+    "color": "Yellow"
+  },
+  {
+    "name": "Pink Sunglasses",
+    "price": 12.95,
+    "imagePath": "https://example.com/images/pink_sunglasses.jpg",
+    "sku": 3579024681,
+    "color": "Pink"
+  },
+  {
+    "name": "Brown Leather Watch",
+    "price": 49.99,
+    ""imagePath"": "https://example.com/images/brown_leather_watch.jpg",
+    "sku": 2468013579,
+    "color": "Brown"
+  }
+];
