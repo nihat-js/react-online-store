@@ -1,0 +1,47 @@
+.add-product-modal{
+  form {
+    input{
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border : 1px solid #ece;
+      font-size: 17px;
+      &:hover,&:focus{
+        outline: none;
+        border-color : #457;
+      }
+    }
+  }
+  .title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  button {
+    padding: 12px 18px;
+    color : #fff;
+    border: none;
+    border-radius: 7px;
+    &:hover{
+      opacity: .85;
+    }
+  }
+  .actions {
+    display: flex;
+    gap : 10px;
+  }
+  .btn-save{
+    background-color: #191;
+  }
+  .btn-cancel{
+    background-color: #a02;
+  }
+  .actions {
+
+  }
+  .form-group h4 {
+    margin-bottom: 8px;
+  }
+}

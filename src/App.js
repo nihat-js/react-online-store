@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import './App.css';
 import { useEffect } from 'react';
+import Products from './components/Products';
+import CreateProduct from './components/modal/CreateProduct';
 
 function App() {
 
   const [favorites,setFavorites] = useState([])
   const [products,setProducts] = useState([])
-
+  const [showAddModal,setShowAddModal] = useState(false)
 
 
 
@@ -34,7 +36,15 @@ function App() {
 
   return (
     <div className="App">
+      <nav>
 
+      </nav>
+      <button onClick={() => setShowAddModal(true) } >  Add Product </button>
+      <CreateProduct products={products} setProducts={setProducts}  showModal={showAddModal} setShowModal={setShowAddModal} />
+
+
+
+      <Products products={products} favorites={favorites} />
     </div>
   );
 }
