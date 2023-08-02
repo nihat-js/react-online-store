@@ -1,5 +1,6 @@
 [
   {
+    "id" : "76ccb44c-313b-11ee-be56-0242ac120002",
     "name": "Blue Striped Scarf",
     "price": 19.99,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -7,6 +8,7 @@
     "color": "Blue"
   },
   {
+    "id" : "866a4324-313b-11ee-be56-0242ac120002",
     "name": "Red Leather Handbag",
     "price": 59.95,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -14,6 +16,7 @@
     "color": "Red"
   },
   {
+    "id" : "b3f748bc-18d7-4ff9-ad70-00b4bfea07a6",
     "name": "Gold Dangle Earrings",
     "price": 29.99,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -21,6 +24,7 @@
     "color": "Gold"
   },
   {
+    "id" : "6ca54b4e-24a6-46e0-b4a5-6013b377f373",
     "name": "Black Fedora Hat",
     "price": 24.95,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -28,6 +32,7 @@
     "color": "Black"
   },
   {
+    "id" : "e53b480a-f62e-437f-b574-7577f641af52",
     "name": "Purple Tote Bag",
     "price": 34.99,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -35,6 +40,7 @@
     "color": "Purple"
   },
   {
+    "id" :"0ef63f9f-39a6-4c48-b11e-0fb921dc9477",
     "name": "Silver Bangle Bracelet",
     "price": 15.95,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpgt.jpg",
@@ -42,6 +48,7 @@
     "color": "Silver"
   },
   {
+    "id" : "11beb3ac-eaf1-4b6f-831b-f37851b507a6",
     "name": "Green Patterned Scarf",
     "price": 22.99,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg.jpg",
@@ -49,6 +56,7 @@
     "color": "Green"
   },
   {
+    "id":"37cee992-6d9c-45ad-a0bc-a37271d6e2bf",
     "name": "Yellow Beanie Hat",
     "price": 18.50,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg__AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -56,6 +64,7 @@
     "color": "Yellow"
   },
   {
+    "id" :"6ef7dd18-c08d-4454-8bb5-c7edbbbde99a",
     "name": "Pink Sunglasses",
     "price": 12.95,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -63,6 +72,7 @@
     "color": "Pink"
   },
   {
+    "id" : "381a063d-2a13-4558-8106-2c2f7e749c21",
     "name": "Brown Leather Watch",
     "price": 49.99,
     "imagePath": "https://m.media-amazon.com/images/I/61fF9F2UQdL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
