@@ -2,12 +2,13 @@ import React from 'react'
 import "./Product.scss"
 import star from "../assets/star.svg"
 import starFilled from "../assets/star-filled.svg"
-export default function Product({  favorites,updateFavorites ,data: { id,name, price, imagePath, sku, color } }) {
+import MyStorage from '../../classes/MyStorage'
+export default function Product({  favorites,setFavorites ,data: { id,name, price, imagePath, sku, color } }) {
 
   let isFav =  favorites.indexOf(id) > -1  
   function  handleStarClick(){
-    const type = isFav ? "REMOVE" : "ADD" 
-    updateFavorites({type ,payload : id}) 
+    let arr  = isFav ?   MyStorage.remove(favorites,id) : MyStorage.remove(favorites,id)
+    setFavorites(arr)
   }
 
   return (

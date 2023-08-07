@@ -19,6 +19,7 @@ export default function CreateProduct({ products,setProducts,showModal, setShowM
     setProducts(prevState => [ formData , ...products ,] )
     setShowModal(false)
     setFormData(emptyData)
+    
   }
 
   function handleChange(e) {

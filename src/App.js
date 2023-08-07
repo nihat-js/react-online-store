@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './App.scss';
 import { useEffect } from 'react';
-import Products from './components/Products';
+import Products from './components/Products/Products';
 import CreateProduct from './components/modal/CreateProduct';
-import {loadFavorites , updateFavorites} from './utils/Favorites'
+import { loadFavorites, updateFavorites } from './utils/Favorites'
+import { loadProducts, loadLocalProducts } from './utils/Products'
+import MyStorage from "./classes/MyStorage"
 function App() {
 
   const [favorites, setFavorites] = useState([])
@@ -17,11 +19,11 @@ function App() {
 
 
   useEffect(() => {
-    loadFavorites(favorites,setFavorites)
-    loadProducts().then(
-      loadLocalProducts()
-      (response) => {
-      setProducts(response)
+    
+    setFavorites(MyStorage.load(favorites))
+    let localProducts = loadLocalProducts()
+    loadProducts().then(products => {
+      setProducts([...localProducts, ...products])
     })
   }, [])
 
@@ -36,7 +38,7 @@ function App() {
 
 
 
-      <Products products={products} favorites={favorites} updateFavorites={updateFavorites.bind(null,favorites,setFavorites)} />
+      <Products products={products} favorites={favorites}   setFavorites={setFavorites}  />
     </div>
   );
 }
