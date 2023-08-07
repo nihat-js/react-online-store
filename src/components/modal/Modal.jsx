@@ -1,9 +1,11 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
 import './Modal.scss'
+import PropTypes from 'prop-types';
 
 
-export default function Modal({ className ,show, setShow,  showCloseButton = true , children }) {
+
+export default function Modal({ className ,show, setShow,  showCloseButton  , children }) {
 
 
   useEffect(() => {
@@ -36,4 +38,15 @@ export default function Modal({ className ,show, setShow,  showCloseButton = tru
   )
 }
 
+Modal.propTypes = {
+  className : PropTypes.string,
+  show : PropTypes.bool.isRequired,
+  setShow : PropTypes.func.isRequired,
+  showCloseButton  : PropTypes.bool,
+  children : PropTypes.node
+}
 
+
+Modal.defaultProps = {
+  showCloseButton : false
+}

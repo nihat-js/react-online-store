@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import './App.scss';
 import { useEffect } from 'react';
-import Products from './components/Products/Products';
+import Products from './components/products/Products';
 import CreateProduct from './components/modal/CreateProduct';
-import { loadFavorites, updateFavorites } from './utils/Favorites'
-import { loadProducts, loadLocalProducts } from './utils/Products'
+import { fetchProducts, } from './api/api'
 import MyStorage from "./classes/MyStorage"
 function App() {
 
@@ -19,11 +18,10 @@ function App() {
 
 
   useEffect(() => {
-    
-    setFavorites(MyStorage.load(favorites))
-    let localProducts = loadLocalProducts()
-    loadProducts().then(products => {
-      setProducts([...localProducts, ...products])
+
+    setFavorites(MyStorage.load("favorites"))
+    fetchProducts().then(products => {
+      setProducts([...MyStorage.load("products"), ...products])
     })
   }, [])
 
@@ -38,7 +36,7 @@ function App() {
 
 
 
-      <Products products={products} favorites={favorites}   setFavorites={setFavorites}  />
+      <Products products={products} favorites={favorites} setFavorites={setFavorites} />
     </div>
   );
 }

@@ -1,21 +1,22 @@
 import React from 'react'
 import "./Product.scss"
-import star from "../assets/star.svg"
-import starFilled from "../assets/star-filled.svg"
+import star from "../../assets/star.svg"
+import starFilled from "../../assets/star-filled.svg"
 import MyStorage from '../../classes/MyStorage'
-export default function Product({  favorites,setFavorites ,data: { id,name, price, imagePath, sku, color } }) {
+import PropTypes from 'prop-types'; 
+export default function Product({ favorites, setFavorites, data: { id, name, price, imagePath, sku, color } }) {
 
-  let isFav =  favorites.indexOf(id) > -1  
-  function  handleStarClick(){
-    let arr  = isFav ?   MyStorage.remove(favorites,id) : MyStorage.remove(favorites,id)
+  let isFav = favorites.indexOf(id) > -1
+  function handleStarClick() {
+    let arr = isFav ? MyStorage.remove("favorites", (el) => el !== id) : MyStorage.add("favorites", id)
     setFavorites(arr)
   }
 
   return (
     <div className="card">
       <header>
-        <img  className='product-img' src={imagePath} alt="Product image" />
-        <img className='star' src={isFav ? starFilled : star} alt=""  onClick={handleStarClick}/>
+        <img className='product-img' src={imagePath} alt="Product image" />
+        <img className='star' src={isFav ? starFilled : star} alt="" onClick={handleStarClick} />
       </header>
       <div className="body">
         <h2> Name {name}</h2>
@@ -26,4 +27,11 @@ export default function Product({  favorites,setFavorites ,data: { id,name, pric
     </div>
   )
 
+}
+
+
+Product.propTypes = {
+  favorites : PropTypes.array.isRequired,
+  setFavorites : PropTypes.func.isRequired,
+  data : PropTypes.object.isRequired,
 }

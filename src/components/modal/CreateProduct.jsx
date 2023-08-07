@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
 import Modal from './Modal'
 import "./CreateProduct.scss"
-export default function CreateProduct({ products,setProducts,showModal, setShowModal }) {
+import MyStorage from '../../classes/MyStorage'
+import { v4 } from "uuid"
+import PropTypes from 'prop-types';
+
+export default function CreateProduct({ products, setProducts, showModal, setShowModal }) {
 
   const emptyData = {
-    name:"",
-    price:0,
-    imagePath:"",
-    color : "",
-    sku:0,
+    name: "",
+    price: 0,
+    imagePath: "",
+    color: "",
+    sku: 0,
   }
 
   const [formData, setFormData] = useState(emptyData)
@@ -16,10 +20,12 @@ export default function CreateProduct({ products,setProducts,showModal, setShowM
 
   function handleSave(e) {
     e.preventDefault()
-    setProducts(prevState => [ formData , ...products ,] )
+    formData.id = v4()
+    MyStorage.add("products", formData)
+    setProducts(prevState => [formData, ...products,])
     setShowModal(false)
     setFormData(emptyData)
-    
+
   }
 
   function handleChange(e) {
@@ -40,19 +46,19 @@ export default function CreateProduct({ products,setProducts,showModal, setShowM
         </div>
         <div className="form-group">
           <h4> Price $</h4>
-          <input type="number"  name="price" value={formData?.price} onChange={handleChange} />
+          <input type="number" name="price" value={formData?.price} onChange={handleChange} />
         </div>
         <div className="form-group">
           <h4> Image Path </h4>
-          <input type="text" name="imagePath" value={formData?.imagePath}  onChange={handleChange} />
+          <input type="text" name="imagePath" value={formData?.imagePath} onChange={handleChange} />
         </div>
         <div className="form-group">
           <h4>Color</h4>
-          <input type="text" name="color" value={formData?.color}  placeholder='Color' onChange={handleChange} />
+          <input type="text" name="color" value={formData?.color} placeholder='Color' onChange={handleChange} />
         </div>
         <div className="form-group">
           <h4> SKU </h4>
-          <input type="number" name="sku"  value={formData?.sku}  onChange={handleChange} />
+          <input type="number" name="sku" value={formData?.sku} onChange={handleChange} />
         </div>
         <div className="actions">
           <button onClick={handleCancel} className='btn-cancel'> Cancel </button>
@@ -61,4 +67,12 @@ export default function CreateProduct({ products,setProducts,showModal, setShowM
       </form>
     </Modal>
   )
+}
+
+
+CreateProduct.propTypes = {
+  products: PropTypes.array.isRequired,
+  setProducts : PropTypes.func.isRequired,
+  showModal: PropTypes.bool.isRequired,
+  setShowModal: PropTypes.func.isRequired,
 }
